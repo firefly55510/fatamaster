@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FateMaster 模拟版</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="bg-glow glow-a"></div>
+    <div class="bg-glow glow-b"></div>
+
+    <header class="topbar shell">
+      <div class="brand">
+        <div class="brand-mark">命</div>
+        <div>
+          <h1>FateMaster</h1>
+          <p>AI 智能 · 东方智慧解析系统（模拟版）</p>
+        </div>
+      </div>
+      <span class="top-tag">无登录 / 无订阅</span>
+    </header>
+
+    <section class="hero shell card">
+      <div class="hero-left">
+        <p class="hero-kicker">核心理念</p>
+        <h2>AI 智能，科学解析</h2>
+        <p class="hero-text">
+          以现代算法模拟东方命理分析流程，帮助用户从不同视角观察自身、关系与决策。
+          保留完整功能入口，移除账号权限与订阅限制，适合产品验证与原型演示。
+        </p>
+      </div>
+      <div class="hero-right">
+        <p class="quote">“除非你意识到你的潜意识，否则潜意识将主导你的人生，而你将其称为命运。”</p>
+        <p class="quote-author">— 卡尔·荣格</p>
+      </div>
+    </section>
+
+    <main class="shell workspace">
+      <section class="card module-zone">
+        <div class="zone-head">
+          <div>
+            <h3>智能解析服务</h3>
+            <p>共 <span id="module-count">0</span> 个模块，点击卡片切换</p>
+          </div>
+          <span id="active-module-api" class="api-chip">等待选择</span>
+        </div>
+        <div id="module-list" class="module-grid"></div>
+      </section>
+
+      <section class="work-grid">
+        <section class="card panel">
+          <div class="panel-head">
+            <h3 id="module-title">请选择模块</h3>
+            <p id="module-desc">下方将展示该模块对应的输入项</p>
+          </div>
+
+          <form id="dynamic-form"></form>
+
+          <div class="actions">
+            <button id="submit-btn" type="button">开始分析</button>
+            <button id="export-pdf-btn" type="button" class="ghost" style="display: none;">导出PDF报告</button>
+            <button id="reset-btn" type="button" class="ghost">重置输入</button>
+          </div>
+        </section>
+
+        <section class="card result-wrap">
+          <div class="result-head">
+            <h3>分析结果</h3>
+            <span class="muted">AI 分析输出</span>
+          </div>
+          <div id="result">等待输入...</div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer shell">
+      <p>说明：本项目仅用于体验与自我觉察，不构成现实决策依据。</p>
+    </footer>
+
+    <script src="/static/app.js"></script>
+  </body>
+  </html>
